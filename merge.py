@@ -15,6 +15,7 @@ patients = pd.DataFrame({
     "diabetes": np.random.choice([0, 1], N, p=[0.80, 0.20])
 })
 
+# Keep BMI within a realistic range
 patients["bmi"] = patients["bmi"].clip(15, 50)
 
 # Create a synthetic risk score
